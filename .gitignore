@@ -1,0 +1,16 @@
+# MySQL data
+mysql-data/
+mysql_data/
+data/
+
+# Docker volumes
+volumes/
+db-data/
+
+# Python
+__pycache__/
+*.pyc
+
+# Environment files
+.env
+
