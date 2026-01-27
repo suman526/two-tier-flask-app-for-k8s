@@ -1,18 +1,21 @@
 apiVersion: v1
+# We are creating a pod 
 kind: Pod
 metadata:
   name: two-tier-app-pod
+# specifications of pod 
+# Add the enviroment variables 
 spec:
   containers:
   - name: two-tier-app-pod
-    image: trainwithshubham/flaskapp:latest
+    image: sumany15/flaskapp:latest
     env:
       - name: MYSQL_HOST
-        value: "10.98.19.211"          # this is your mysql's service clusture IP, Make sure to change it with yours
+        value: "10.97.50.99"          # this is mysql's service clusture IP
       - name: MYSQL_PASSWORD
         value: "admin"
       - name: MYSQL_USER
-        value: "root"
+        value: "admin"
       - name: MYSQL_DB
         value: "mydb"
     ports:
