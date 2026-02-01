@@ -1,6 +1,6 @@
 # How to setup two-tier application deployment on kubernetes cluster
 ## First setup kubernetes kubeadm cluster
-Use this repository to setup kubeadm https://github.com/LondheShubham153/kubestarter/blob/main/kubeadm_installation.md
+Use this repository to setup kubeadm https://github.com/suman526/k8s-setup-for-ubuntu
 
 ## SetUp
 - First clone the code to your machine
@@ -11,21 +11,27 @@ git clone https://github.com/suman526/two-tier-flask-app-for-k8s.git
 cd two-tier-flask-app/k8s
 ```
 - Now, execute below commands one by one
-```bash
-kubectl apply -f twotier-deployment.yml
-```
-```bash
-kubectl apply -f twotier-deployment-svc.yml
-```
+- First setup mysql database
 ```bash
 kubectl apply -f mysql-deployment.yml
 ```
 ```bash
 kubectl apply -f mysql-deployment-svc.yml
 ```
+THEN GRANT PRIVILEGE TO ADMIN USER OF MYSQL
+
 ```bash
 kubectl apply -f persistent-volume.yml
 ```
 ```bash
 kubectl apply -f persistent-volume-claim.yml
 ```
+
+```bash
+kubectl apply -f twotier-deployment.yml
+```
+```bash
+kubectl apply -f twotier-deployment-svc.yml
+```
+
+
