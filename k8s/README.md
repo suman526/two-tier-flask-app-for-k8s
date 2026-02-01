@@ -6,6 +6,8 @@ Use this repository to setup kubeadm https://github.com/suman526/k8s-setup-for-u
 - First clone the code to your machine
 ```bash
 git clone https://github.com/suman526/two-tier-flask-app-for-k8s.git
+```
+
 - Move to k8s directory
 ```bash
 cd two-tier-flask-app/k8s
@@ -18,7 +20,7 @@ kubectl apply -f mysql-deployment.yml
 ```bash
 kubectl apply -f mysql-deployment-svc.yml
 ```
-THEN GRANT PRIVILEGE TO ADMIN USER OF MYSQL
+THEN GRANT PRIVILEGE TO ADMIN USER OF MYSQL THEN ONLY RUN FLASK APP DEPLOYMENT AND SVC
 
 ```bash
 kubectl apply -f persistent-volume.yml
